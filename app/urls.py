@@ -1,4 +1,4 @@
-from connect_class import ConnectFile
+from app.connect_class import ConnectFile
 from database.database import FILENAME
 
 
