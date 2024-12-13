@@ -64,11 +64,11 @@ def findBook(searchBook: str | int) -> None:
     for elem in data['books']:
         if searchBook == elem['title'] or searchBook == elem['author'] or searchBook == elem['year']:
             print(
-                "Название: ", elem['title'], 
-                "Автор: ", elem['author'],
-                "Год издания: ", elem['year'],
-                "Статус: ", elem['status'],
-                "ID: ", elem['id_book']
+                "Название: ", elem['title'],"\n"
+                "Автор: ", elem['author'],"\n"
+                "Год издания: ", elem['year'],"\n"
+                "Статус: ", elem['status'],"\n"
+                "ID: ", elem['id_book'],"\n"
                 )
 
 
