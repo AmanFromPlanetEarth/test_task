@@ -11,18 +11,18 @@ if __name__=='__main__':
                         "2 - как пользователь\n3 - выход\n")
         if command == '1':
             print("Вы попали в пользовательское меню администратора")
-            print("Здесь вы можете добавлять книги в библиотеку,"
-                  "удалять книги,"
-                  "искать книгу,"
-                  "отображать список всех книг,"
+            print("Здесь вы можете добавлять книги в библиотеку\n"
+                  "удалять книги\n"
+                  "искать книгу\n"
+                  "отображать список всех книг\n"
                   "и изменять статус")
-            print("Команды:"
-                  "add - добавить книгу"
-                  "del - удалить книгу,"
-                  "find - поиск книги,"
-                  "all - отоброзить все книги,"
-                  "ch - изменить статус"
-                  "ex - выход")
+            print("Команды:\n"
+                  "add - добавить книгу\n"
+                  "del - удалить книгу\n"
+                  "find - поиск книги\n"
+                  "all - отоброзить все книги\n"
+                  "ch - изменить статус\n"
+                  "ex - выход\n")
             admin_command = input("Введите команду: ")
             if admin_command.lower() == 'add':
                 title: str = input("Введите название: ")
@@ -37,8 +37,8 @@ if __name__=='__main__':
                 deleteBook(id_book)
             if admin_command.lower() == 'find':
                 print("Здесь вы можете искать книгу по названию,"
-                      "автору или по году издания")
-                print("1 - по автору, 2 - по названию, 3 - по году издания")
+                      "автору или по году издания\n")
+                print("1 - по автору\n2 - по названию\n3 - по году издания\n")
                 srch_book = input("Введите команду: ")
                 if srch_book == '1':
                     author = input("Введите имя автора: ")
@@ -52,16 +52,22 @@ if __name__=='__main__':
                     year = int(input("Введите год издания: "))
                     input("Нажмите 'Enter' чтобы продолжить")
                     findBook(year)
+                else:
+                    print("Ошибка! Такой команды нет.")
+                    break
             if admin_command.lower() == 'all':
                 getAllBook()
             if admin_command.lower() == 'ch':
-                id_book: int = int(input("Введите ID книги"))
-                status: str = input("Введите статус")
+                id_book: int = int(input("Введите ID книги: "))
+                status: str = input("Введите статус: ")
                 input("Нажмите 'Enter' чтобы продолжить")
                 changeStatusBook(id_book, status)
             if admin_command.lower() == 'ex':
                 print("Программа завершила свою работу")
                 break
+            else:
+                    print("Ошибка! Такой команды нет.")
+                    break
         if command == '2':
             print("Вы попали в пользовательское меню")
             print("Здесь вы можете искать книги и выводить список всех книг")
@@ -87,14 +93,22 @@ if __name__=='__main__':
                     year = int(input("Введите год издания: "))
                     input("Нажмите 'Enter' чтобы продолжить")
                     findBook(year)
+                else:
+                    print("Ошибка! Такой команды нет.")
+                    break
             if user_command.lower() == 'all':
                 getAllBook()
             if user_command.lower() == 'ex':
                 print("Программа завершила свою работу")
                 break
-
+            else:
+                    print("Ошибка! Такой команды нет.")
+                    break
         if command == '3':
             print("Приложение завершило свою работу.")
+            break
+        else:
+            print("Ошибка! Такой команды нет.")
             break
 
 
